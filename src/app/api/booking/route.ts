@@ -1,10 +1,17 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: Request) {
   try {
+    if (!process.env.RESEND_API_KEY) {
+      return NextResponse.json(
+        { error: "RESEND_API_KEY is not configured" },
+        { status: 500 },
+      );
+    }
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
     const formData = await request.formData();
     const name = formData.get("name") as string;
     const email = formData.get("email") as string;
@@ -13,13 +20,6 @@ export async function POST(request: Request) {
     const placement = formData.get("placement") as string;
     const budget = formData.get("budget") as string;
     const referenceImage = formData.get("referenceImage") as File | null;
-
-    if (!process.env.RESEND_API_KEY) {
-      return NextResponse.json(
-        { error: "RESEND_API_KEY is not configured" },
-        { status: 500 },
-      );
-    }
 
     const attachments = [];
     if (referenceImage && referenceImage.size > 0) {

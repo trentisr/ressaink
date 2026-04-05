@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className="relative h-screen flex items-center justify-center text-center text-white">
       <Image
-        src="/hero.jpg"
+        src="/hero.png"
         alt="Background tattoo art"
         layout="fill"
         objectFit="cover"

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import Lightbox from './ui/Lightbox'; // Assuming Lightbox is in src/components/ui
 
-const tattooImages = Array.from({ length: 12 }, (_, i) => `/tattoos/${i + 1}.jpg`);
+const tattooImages = Array.from({ length: 12 }, (_, i) => `/tattoos/${i + 1}.png`);
 
 export default function Portfolio() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
