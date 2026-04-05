@@ -14,7 +14,7 @@ export default function Hero() {
       />
       <div className="relative z-10 p-6">
         <h1 className="text-6xl md:text-8xl font-extrabold tracking-tighter mb-4">
-          Reesa
+          Ressa
         </h1>
         <p className="text-xl md:text-2xl font-light mb-8">
           Fine Line & Blackwork Tattoo Artist
