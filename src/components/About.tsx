@@ -23,7 +23,7 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <Image
-              src="/profile.jpg"
+              src="/profile.png"
               alt="Reesa, the tattoo artist"
               width={300}
               height={300}

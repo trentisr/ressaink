@@ -21,10 +21,10 @@ export default function Footer() {
         <p className="mb-2">
           Email:{" "}
           <Link
-            href="mailto:Reesa.tattoo@example.com"
+            href="mailto:Reesaink@gmail.com"
             className="hover:text-white transition-colors"
           >
-            Reesa.tattoo@example.com
+            Reesaink@gmail.com
           </Link>
         </p>
         <p>&copy; {currentYear} Reesa Ink. All rights reserved.</p>
